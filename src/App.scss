@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./omnes.ttf') format('truetype');
+}
+
+.App {
+    font-family: "Omnes";
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+  height: 90px;
+  padding-top: 10px;
+  width: 97%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 25px;
+
+  .logo {
+    height: 50px;
+  }
+
+  .mail {
+    height: 40px;
+    position: relative;
+    top: -3px;
+  }
+}
+
+.body, .footer {
+  margin: auto 25px;
+  color: #fff;
+}
+
+.body {
+  width: 75%;
+
+  a {
+    text-decoration: underline;
+    color: white;
+    margin-right: 5px;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+
+  h2 {
+    margin-bottom: 10px;
+    opacity: .75;
+  }
+
+  a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #fff;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .body {
+    font-size: 24px;
+  }
+
+  .body-text {
+    font-size: 2.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header, .body, .footer {
+    margin: auto 15px;
+  }
+
+  .body {
+    width: 90%;
+    font-size: 12px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    width: 90%;
+    padding-top: 0px;
+
+    .logo {
+      height: 30px;
+    }
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
