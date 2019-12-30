@@ -31,7 +31,6 @@ function App() {
         <a href="https://tstng.co/"> TESTING - A$AP ROCKY </a>
         <a href="http://dialupstuff.com/"> DIALUPSTUFF </a>
         <a href="https://lyricallemonade.com"> LYRICAL LEMONADE WEBSITE </a>
-        <a href="https://www.rogueagency.us/"> ROGUE AGENCY </a>
         <a href="https://psych.world/"> PSYCH WORLD </a>
       </div>
     </div>
