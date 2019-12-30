@@ -20,7 +20,7 @@ function App() {
       </div>
       <div className="body">
         <h1 className="body-text"> Dial Up Digital is the technology arm of the multi-hyphenate creative collective and “family-owned business” <a href="http://dialupstuff.com/" target="_blank" rel="noopener noreferrer">Dial Up</a>. As artists and technologists, we work on creating unique digital experiences at the intersection of music, technology and culture. </h1>
-        <a href="mailto:dialupcode@gmail.com">
+        <a href="mailto:hello@dialup.digital">
           Contact us
         </a>
         to speak more about how we can work together.
