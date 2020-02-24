@@ -1,16 +1,15 @@
 @font-face {
-  font-family: 'Omnes';
+  font-family: "Omnes";
   font-style: normal;
   font-weight: 400;
-  src: url('./omnes.ttf') format('truetype');
+  src: url("./omnes.ttf") format("truetype");
 }
 
 .App {
-    font-family: "Omnes";
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  font-family: "Omnes";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -35,7 +34,8 @@
   }
 }
 
-.body, .footer {
+.body,
+.footer {
   margin: auto 25px;
   color: #fff;
 }
@@ -60,7 +60,7 @@
 
   h2 {
     margin-bottom: 10px;
-    opacity: .75;
+    opacity: 0.75;
   }
 
   a {
@@ -90,9 +90,10 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
-  .header, .body, .footer {
+  .header,
+  .body,
+  .footer {
     margin: auto 15px;
   }
 
