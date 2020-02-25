@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./dialup-retro-logo.png";
 import "./App.scss";
 
@@ -17,7 +17,9 @@ const setRandomBackgroundColor = () => {
 };
 
 function App() {
-  setRandomBackgroundColor();
+  useEffect(() => {
+    setRandomBackgroundColor();
+  }, []);
 
   return (
     <div className="App">
