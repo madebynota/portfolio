@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <div className="contentContainer">
         <div className="header">
-          <img className="logo" src={logo} />
+          <img className="logo" src={logo} alt="Dial Up Logo" />
         </div>
         <div className="body">
           <h1>
