@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./retro.png";
+import logo from "./dialup-retro-logo.png";
 import "./App.scss";
 
 const chooseBkg = () => {
