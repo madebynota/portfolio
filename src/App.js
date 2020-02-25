@@ -2,24 +2,25 @@ import React from "react";
 import logo from "./dialup-retro-logo.png";
 import "./App.scss";
 
-const chooseBkg = () => {
+const setRandomBackgroundColor = () => {
   const num = Math.random() * 100;
-  return num < 25
-    ? "#f6c875"
-    : num < 50
-    ? "#59d8cd"
-    : num < 75
-    ? "#ff5d5d"
-    : "#5fd5ff";
-};
+  const bgColor =
+    num < 25
+      ? "#f6c875"
+      : num < 50
+      ? "#59d8cd"
+      : num < 75
+      ? "#ff5d5d"
+      : "#5fd5ff";
 
-const bkgColor = {
-  backgroundColor: chooseBkg()
+  document.body.style.background = bgColor;
 };
 
 function App() {
+  setRandomBackgroundColor();
+
   return (
-    <div className="App" style={bkgColor}>
+    <div className="App">
       <div className="contentContainer">
         <div className="header">
           <img className="logo" src={logo} />
