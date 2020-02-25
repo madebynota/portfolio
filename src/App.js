@@ -49,6 +49,7 @@ function App() {
         </div>
         <div className="footer">
           <h2> stuff we've made </h2>
+          <a href="https://faith.rhizome.org/">BABY FAITH</a>
           <a href="https://apps.apple.com/gb/app/the-summer-smash/id1467678976?ign-mpt=uo%3D2">
             {" "}
             SUMMER SMASH APP{" "}
