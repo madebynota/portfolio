@@ -2,7 +2,23 @@
   font-family: "Omnes";
   font-style: normal;
   font-weight: 400;
-  src: url("./omnes.ttf") format("truetype");
+  src: url("./fonts/omnes.ttf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  width: 100%;
 }
 
 .App {
