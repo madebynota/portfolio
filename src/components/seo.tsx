@@ -11,12 +11,15 @@ export const SEO = ({ title, description, pathname, children }) => {
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
-  }
+  } 
 
   return (
     <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:tile" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta property="og:image:width" content="600" />
       <meta property="og:image:height" content="600" />
