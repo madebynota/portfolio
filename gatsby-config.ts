@@ -2,8 +2,13 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `DIAL UP DIGITAL`,
+    siteUrl: `https://dialup.digital`,
+    image: "/embed-image.png",
+    description: 'We create unique digital experiences at the intersection of music, technology, and culture.',
+    ogImageWidth: 600,
+    ogImageHeight: 600,
+    twitterDomain: 'dialup.digital',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -14,8 +19,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Dial Up Digital",
-        short_name: "Dial Up Digital",
+        name: "DIAL UP DIGITAL",
+        short_name: "DIAL UP DIGITAL",
         start_url: ".",
         background_color: "#ffffff",
         theme_color: "#000000",

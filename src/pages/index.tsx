@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import type { HeadFC, PageProps } from "gatsby";
+import SEO from "../components/seo";
 import logo from "../images/dialup-retro-logo.png";
 import "../styles.scss";
 
@@ -67,4 +68,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>DIAL UP DIGITAL</title>
+export const Head: HeadFC = () => <SEO />
