@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import logo from "./dialup-retro-logo.png";
-import "./App.scss";
+import type { HeadFC, PageProps } from "gatsby";
+import SEO from "../components/seo";
+import logo from "../images/dialup-retro-logo.png";
+import "../styles.scss";
 
 const setRandomBackgroundColor = () => {
   const num = Math.random() * 100;
@@ -16,13 +18,13 @@ const setRandomBackgroundColor = () => {
   document.body.style.background = bgColor;
 };
 
-function App() {
+const IndexPage: React.FC<PageProps> = () => {
   useEffect(() => {
     setRandomBackgroundColor();
   }, []);
 
   return (
-    <div className="App">
+    <div id="root" className="App">
       <div className="contentContainer">
         <div className="header">
           <img className="logo" src={logo} alt="Dial Up Logo" />
@@ -64,4 +66,6 @@ function App() {
   );
 }
 
-export default App;
+export default IndexPage
+
+export const Head: HeadFC = () => <SEO />
