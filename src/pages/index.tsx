@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import SEO from "../components/seo";
+import { SEO } from "../components";
 import logo from "../images/dialup-retro-logo.png";
-import "../styles.scss";
+import "../styles/styles.scss";
 
 const setRandomBackgroundColor = () => {
   const num = Math.random() * 100;

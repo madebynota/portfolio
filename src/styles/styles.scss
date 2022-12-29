@@ -1,8 +1,17 @@
+@import "variables";
+
 @font-face {
   font-family: "Omnes";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/omnes.ttf") format("truetype");
+  src: url("../fonts/omnes.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  font-style: medium;
+  font-weight: 350;
+  src: url("../fonts/OperatorMono-Medium.ttf") format("truetype");
 }
 
 html,
@@ -23,7 +32,7 @@ body {
 
 .App {
   font-family: "Omnes", sans-serif;
-  color: #fff;
+  color: $color_white;
   min-height: 100%;
   width: 100%;
   display: flex;
@@ -60,11 +69,11 @@ body {
 
   a {
     text-decoration: underline;
-    color: white;
+    color: $color_white;
     margin-right: 5px;
 
     &:hover {
-      color: black;
+      color: $color_black;
     }
   }
 }
@@ -82,10 +91,10 @@ body {
     text-decoration: none;
     margin-right: 20px;
     font-size: 20px;
-    color: #fff;
+    color: $color_white;
 
     &:hover {
-      color: #000;
+      color: $color_black;
     }
   }
 }
