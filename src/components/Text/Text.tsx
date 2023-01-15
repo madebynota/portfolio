@@ -1,9 +1,9 @@
 import React from "react";
-import { TextProps } from "./types";
-import "./styles.scss";
+import { TextProps } from "./TextTypes";
+import { useMediaQuery } from "../../hooks/use-media-query";
 
 const mapTypeToClassName = (type: string) => {
-  switch(type) {
+  switch (type) {
     case "p+":
       return "p_large";
     case "p-":
@@ -13,13 +13,22 @@ const mapTypeToClassName = (type: string) => {
   };
 };
 
-export const Text = ({
+export const Text: React.FC<TextProps> = ({
+  children,
   className = "",
-  style = {},
-  text = "",
+  mobileType,
   type = "p",
-}: TextProps) => (
-  <p style={style} className={`${mapTypeToClassName(type)} ${className}`}>{text}</p>
-)
+  ...restProps
+}) => {
+  let textType = type;
+  if (mobileType) {
+    const isMobile = useMediaQuery("(max-width: 768px)");
+    textType = isMobile && mobileType ? mobileType : type;
+  }
+
+  return (
+    <p className={`${mapTypeToClassName(textType)} ${className}`} {...restProps}>{children}</p>
+  );
+};
 
 export default Text;
