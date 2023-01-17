@@ -9,21 +9,16 @@ export const Button: React.FC<ButtonProps> = ({
   type = "solid",
   onClick,
   ...restProps
-}) => {
-
-  return (
-    <div
-      aria-label={buttonLabel}
-      role="button"
-      className={`button ${type} ${className}`}
-      onClick={onClick}
-      {...restProps}
-    >
-      <Text type="h6" className="button-label">
-        {buttonLabel}
-      </Text>
-    </div>
-  );
-};
-
-export default Text;
+}) => (
+  <div
+    aria-label={buttonLabel}
+    role="button"
+    className={`button ${type} ${className}`}
+    onClick={onClick}
+    {...restProps}
+  >
+    <Text type="h6" className="button-label">
+      {buttonLabel}
+    </Text>
+  </div>
+);
