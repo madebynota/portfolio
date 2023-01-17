@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  padding: $spacing-x-small $spacing-large;
+  transition: opacity 0.2s;
+
+  & .button-label {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    /* Disable text highlight */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &.outline {
+    border: solid 0.25rem $white;
+    background: transparent;
+  }
+
+  &.solid {
+    background-color: $dream-blue;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:focus, &:active {
+    opacity: 0.70;
+  }
+}
