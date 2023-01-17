@@ -15,7 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
     <div
       aria-label={buttonLabel}
       role="button"
-      className={`button ${type}`}
+      className={`button ${type} ${className}`}
       onClick={onClick}
       {...restProps}
     >
