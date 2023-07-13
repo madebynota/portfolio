@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Omnes";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/omnes.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  font-style: medium;
+  font-weight: 350;
+  src: url("../fonts/OperatorMono-Medium.ttf") format("truetype");
+}
+
+@mixin headingText {
+  color: $white;
+  font-family: "Omnes";
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@mixin bodyText {
+  color: $white;
+  font-family: "Operator Mono";
+  font-weight: 350;
+  line-height: 125%;
+  margin-top: $spacing-xx-small;
+  margin-bottom: $spacing-xx-small;
+}
+
+h1, .h1 {
+  @include headingText;
+  font-size: $h1;
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-large;
+}
+
+h2, .h2 {
+  @include headingText;
+  font-size: $h2;
+  margin-top: $spacing-medium-plus;
+  margin-bottom: $spacing-medium-plus;
+}
+
+h3, .h3 {
+  @include headingText;
+  font-size: $h3;
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
+}
+
+h4, .h4 {
+  @include headingText;
+  font-size: $h4;
+  margin-top: $spacing-medium-light;
+  margin-bottom: $spacing-medium-light;
+}
+
+h5, .h5 {
+  @include headingText;
+  font-size: $h5;
+  margin-top: $spacing-small;
+  margin-bottom: $spacing-small;
+}
+
+h6, .h6 {
+  @include headingText;
+  font-size: $h6;
+  margin-top: $spacing-x-small;
+  margin-bottom: $spacing-x-small;
+}
+
+.p_large {
+  @include bodyText;
+  font-size: $p-large;
+}
+
+p, .p {
+  @include bodyText;
+  font-size: $p;
+}
+
+.p_small {
+  @include bodyText;
+  font-size: $p-small;
+}

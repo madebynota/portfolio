@@ -1,9 +1,5 @@
-@font-face {
-  font-family: "Omnes";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/omnes.ttf") format("truetype");
-}
+@import "variables";
+@import "typography";
 
 html,
 body {
@@ -23,7 +19,7 @@ body {
 
 .App {
   font-family: "Omnes", sans-serif;
-  color: #fff;
+  color: $white;
   min-height: 100%;
   width: 100%;
   display: flex;
@@ -34,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 24px;
+  padding: $spacing-medium-light;
 }
 
 .header {
@@ -51,20 +47,16 @@ body {
   flex-grow: 1;
   flex-shrink: 0;
   width: 75%;
-  font-size: 1.5rem;
+  font-size: $p-large;
   justify-content: center;
-
-  h1 {
-    font-size: 2.5rem;
-  }
 
   a {
     text-decoration: underline;
-    color: white;
-    margin-right: 5px;
+    color: $white;
+    margin-right: $spacing-xxx-small;
 
     &:hover {
-      color: black;
+      color: $black;
     }
   }
 }
@@ -73,35 +65,30 @@ body {
   flex-shrink: 0;
   text-transform: uppercase;
 
-  h2 {
-    margin-bottom: 10px;
+  &-title {
     opacity: 0.75;
   }
 
   a {
     text-decoration: none;
-    margin-right: 20px;
-    font-size: 20px;
-    color: #fff;
+    margin-right: $spacing-small;
+    font-size: $p;
+    color: $white;
 
     &:hover {
-      color: #000;
+      color: $black;
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
   .contentContainer {
-    padding: 16px;
+    padding: $spacing-x-small;
   }
 
   .body {
     width: 90%;
-    font-size: 16px;
-
-    h1 {
-      font-size: 32px;
-    }
+    font-size: $p-small;
   }
 
   .logo {
