@@ -22,5 +22,5 @@ export type TextProps = {
   /**
    * Predefined text type
    */
-  type: HeadingTextTypes | BodyTextTypes;
+  type?: HeadingTextTypes | BodyTextTypes;
 } & React.HTMLProps<HTMLParagraphElement>;

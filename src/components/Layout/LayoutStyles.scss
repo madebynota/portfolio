@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.layout {
+  background-color: $dream-blue;
+  font-family: "Omnes", sans-serif;
+  color: $white;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

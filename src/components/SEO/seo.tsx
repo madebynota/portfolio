@@ -1,9 +1,20 @@
-import React from "react"
-import { useSiteMetadata } from "../../hooks/use-site-metadata"
+import React from "react";
+import { useSiteMetadata } from "../../hooks/use-site-metadata";
+import { SEOProps } from "./SEOTypes";
 
-// @ts-ignore
-export const SEO = ({ title, description, pathname, children }) => {
-  const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata()
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  pathname,
+  children,
+}) => {
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    image,
+    siteUrl,
+    twitterUsername,
+  } = useSiteMetadata()
 
   const seo = {
     title: title || defaultTitle,

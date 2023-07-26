@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+header.header {
+  align-self: center;
+  display: flex;
+  position: fixed;
+  margin-top: $spacing-large;
+  z-index: 100;
+
+  & .logo {
+    height: 48px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header.header {
+    justify-content: center;
+    margin-top: $spacing-x-small;
+    
+    & .logo {
+      height: 24px;
+    }
+  }
+}

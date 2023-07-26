@@ -1,3 +1,4 @@
+@import "breakpoints";
 @import "variables";
 @import "typography";
 
@@ -61,6 +62,18 @@ body {
   }
 }
 
+.site-section {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 90rem;
+  padding: 0 $spacing-x-large;
+  margin: 0 auto;
+
+  @include breakpoint('mobile') {
+    padding: 0 $spacing-medium;
+  }
+}
+
 .footer {
   flex-shrink: 0;
   text-transform: uppercase;
@@ -78,6 +91,21 @@ body {
     &:hover {
       color: $black;
     }
+  }
+}
+
+.demo-section {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: $spacing-medium-plus;
+
+  &__header {
+    color: $dream-blue;
+    max-width: 1100px;
   }
 }
 
