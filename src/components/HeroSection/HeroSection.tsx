@@ -1,15 +1,15 @@
 import React from "react";
-import type { HeadFC, PageProps } from "gatsby";
 import {
   Button,
   Text,
 } from "../../components";
+import heroImg from "../../images/hero-img-placeholder.png";
 import "./HeroSection.scss";
 
 export const HeroSection = () => (
     <section className="root">
       <div className="content-grid">
-        <div>
+        <div className="text-section">
           <Text className="headline" type="h2">
             Event Apps for Everyone
           </Text>
@@ -18,8 +18,8 @@ export const HeroSection = () => (
           </Text> 
           <Button buttonLabel="request demo" onClick={() => alert("Email us at hello@dialup.digital")} />
         </div>
-        <div>
-          <img />
+        <div className="image-section">
+          <img src={heroImg} />
         </div>
       </div>
     </section>

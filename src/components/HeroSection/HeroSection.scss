@@ -2,11 +2,29 @@
 
 .root {
   background: black;
-  height: 43.5rem;
+  min-height: 43.5rem;
 }
 
 .content-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 $spacing-large;
+}
+
+.text-section {
+  margin-top: 15rem;
+}
+
+.headline {
+  margin-bottom: 3rem;
+}
+
+.button {
+  margin-top: 3rem;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
