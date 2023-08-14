@@ -3,12 +3,13 @@
 .root {
   background: black;
   min-height: 43.5rem;
+  display: flex;
 }
 
 .content-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 $spacing-large;
+  flex: 1;
 }
 
 .text-section {
@@ -16,11 +17,11 @@
 }
 
 .headline {
-  margin-bottom: 3rem;
+  margin-bottom: $spacing-medium;
 }
 
 .button {
-  margin-top: 3rem;
+  margin-top: $spacing-medium;
 }
 
 .image-section {

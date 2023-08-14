@@ -7,7 +7,7 @@ import heroImg from "../../images/hero-img-placeholder.png";
 import "./HeroSection.scss";
 
 export const HeroSection = () => (
-    <section className="root">
+    <section className="site-section root">
       <div className="content-grid">
         <div className="text-section">
           <Text className="headline" type="h2">
