@@ -2,6 +2,7 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import {
   Button,
+  HeroSection,
   ImageTextBlock,
   Layout,
   SEO,
@@ -13,18 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <section style={{
-        background: 'black',
-        height: '700px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center'
-      }}>
-        <Text type="h5" mobileType="p" style={{width: '50%'}}>
-          either a summer smash recap video or a video of the app running on iPhone video should be landscape but phone can be portrait
-        </Text>
-      </section>
+      <HeroSection />
       <main style={{padding: '64px 0'}}>
         <ImageTextBlock
           label="WHAT WE DO"

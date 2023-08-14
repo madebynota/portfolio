@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.root {
+  background: black;
+  height: 43.5rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 $spacing-large;
+}
