@@ -3,7 +3,6 @@
 
 .root {
   background: $black;
-  min-height: 43.5rem;
   display: flex;
 }
 
@@ -24,10 +23,6 @@
 
 .headline {
   margin-bottom: $spacing-medium;
-}
-
-.button {
-  margin: $spacing-medium 0;
 }
 
 .image-section {
