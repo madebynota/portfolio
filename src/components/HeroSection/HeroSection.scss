@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+@import "../../styles/breakpoints.scss";
+
+.root {
+  background: $black;
+  display: flex;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex: 1;
+  gap: $spacing-x-small;
+
+  @include breakpoint('mobile') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.text-section {
+  margin-top: 15rem;
+}
+
+.headline {
+  margin-bottom: $spacing-medium;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint('mobile') {
+    display: none;
+  }
+}

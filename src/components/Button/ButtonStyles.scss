@@ -5,6 +5,7 @@
   cursor: pointer;
   padding: $spacing-x-small $spacing-large;
   transition: opacity 0.2s;
+  margin: $spacing-medium 0;
 
   & .button-label {
     text-align: center;
