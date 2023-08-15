@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   flex: 1;
+  gap: $spacing-x-small;
 
   @include breakpoint('mobile') {
     grid-template-columns: 1fr;
@@ -26,7 +27,7 @@
 }
 
 .button {
-  margin-top: $spacing-medium;
+  margin: $spacing-medium 0;
 }
 
 .image-section {
