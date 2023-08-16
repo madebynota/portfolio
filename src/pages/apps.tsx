@@ -13,7 +13,7 @@ import "../styles/global.scss";
 const IndexPage: React.FC<PageProps> = () => {
 
   return (
-    <Layout>
+    <Layout hasHeader={false}>
       <HeroSection />
       <main style={{padding: '64px 0'}}>
         <ImageTextBlock
