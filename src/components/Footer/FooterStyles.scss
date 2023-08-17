@@ -1,4 +1,13 @@
+@import '../../styles/variables';
+
 footer.footer {
   display: flex;
   justify-content: space-between;
+  max-width: 100vw;
+  width: 100%;
+  padding: 0 $spacing-small;
+
+  a {
+    margin: 0;
+  }
 }

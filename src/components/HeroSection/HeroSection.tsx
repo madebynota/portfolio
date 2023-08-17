@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Text,
-} from "../../components";
+import { Button, Text } from "../../components";
 import heroImg from "../../images/hero-img-placeholder.png";
 import logo from "../../images/dialup-retro-logo.png";
 import heroBg from "../../images/noise_bg.png";
@@ -26,8 +23,9 @@ export const HeroSection = () => (
             <img src={mobileImg} />
           </div>
           <Text className="subheadline" type="p+" mobileType="p">
-            Dial Up is powering the next generation of event apps for organizers and attendees
-          </Text> 
+            Dial Up is powering the next generation of event apps for organizers
+            and attendees
+          </Text>
           <Button buttonLabel="request demo" onClick={openDemoForm} />
         </div>
         <div className="image-section">
