@@ -9,16 +9,23 @@
 .content-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "logo image"
+    "text image";
   flex: 1;
   gap: $spacing-x-small;
+  margin: $spacing-large 0;
 
   @include breakpoint('mobile') {
     grid-template-columns: 1fr;
+    margin: $spacing-x-small 0;
   }
 }
 
 .text-section {
-  margin-top: 15rem;
+  grid-area: text;
+  align-self: end;
 }
 
 .headline {
@@ -26,11 +33,21 @@
 }
 
 .image-section {
+  grid-area: image;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @include breakpoint('mobile') {
     display: none;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  height: 3rem;
+
+  @include breakpoint('mobile') {
+    height: 1.5rem;
   }
 }

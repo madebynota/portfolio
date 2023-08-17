@@ -4,12 +4,14 @@ import {
   Text,
 } from "../../components";
 import heroImg from "../../images/hero-img-placeholder.png";
+import logo from "../../images/dialup-retro-logo.png";
 import "./HeroSection.scss";
 
 export const HeroSection = () => (
     <section className="root">
       <div className="site-section">
         <div className="content-grid">
+          <img className="logo" src={logo} alt="Dial Up Logo" />
           <div className="text-section">
             <Text className="headline" type="h2">
               Event Apps for Everyone

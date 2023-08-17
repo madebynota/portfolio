@@ -7,13 +7,14 @@ import "./LayoutStyles.scss";
 export const Layout: React.FC<LayoutProps> = ({
   children,
   className,
+  hasHeader = true,
   ...restProps
 }) => (
   <div
     className={`layout ${className ? className : ''}`}
     {...restProps}
   >
-    <Header />
+    {hasHeader ? <Header /> : null}
     { children }
     <Footer />
   </div>
