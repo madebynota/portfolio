@@ -2,20 +2,22 @@ import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import {
   Button,
+  FeatureBlock,
   HeroSection,
   ImageTextBlock,
   Layout,
   SEO,
   Text,
 } from "../components";
-import "../styles/global.scss";
+import featuresData from "../data/features";
+import "../styles/PageStyles/apps.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout hasHeader={false}>
       <HeroSection />
-      <main style={{padding: '64px 0'}}>
+      <main className="apps-container">
         <ImageTextBlock
           label="WHAT WE DO"
           header="Festival Apps with Style"
@@ -32,9 +34,40 @@ const IndexPage: React.FC<PageProps> = () => {
           body="More about the metrics, downloads, reviews, praise we've gotten"
         />
       </main>
+      <div className="feature-section">
+        <div className="site-section">
+          <Text
+            className="feature-section__header"
+            type="h3"
+            mobileType="h6"
+          >Enhance your event experience</Text>
+          <div className="feature-section__grid">
+            {featuresData.map(feature => (
+              <FeatureBlock
+                iconSrc={feature.iconSrc}
+                title={feature.title}
+                description={feature.description}
+                key={feature.title}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="demo-section">
-        <Text className="demo-section__header" type="h2" mobileType="h6">Looking to build something amazing?  So are we.</Text>
-        <Button buttonLabel="request demo" onClick={() => alert("Email us at hello@dialup.digital")} />
+        <div className="site-section">
+          <Text
+            className="demo-section__header"
+            type="h2"
+            mobileType="h6"
+          >Looking to build something amazing?  So are we.</Text>
+          <a
+            href="https://forms.monday.com/forms/e4aecd01ca582fa2f7d386930fff44ad?r=use1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button buttonLabel="request demo" onClick={() => null}/>
+          </a>
+        </div>
       </div>
     </Layout>
   );

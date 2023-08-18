@@ -94,21 +94,6 @@ body {
   }
 }
 
-.demo-section {
-  background-color: $white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-bottom: $spacing-medium-plus;
-
-  &__header {
-    color: $dream-blue;
-    max-width: 1100px;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .contentContainer {
     padding: $spacing-x-small;

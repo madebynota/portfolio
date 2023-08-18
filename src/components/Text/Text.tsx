@@ -27,7 +27,7 @@ export const Text: React.FC<TextProps> = ({
   }
 
   return (
-    <p className={`${mapTypeToClassName(textType)} ${className}`} {...restProps}>{children}</p>
+    <p className={`text ${mapTypeToClassName(textType)} ${className}`} {...restProps}>{children}</p>
   );
 };
 

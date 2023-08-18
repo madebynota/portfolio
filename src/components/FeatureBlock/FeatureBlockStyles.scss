@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+.feature-block {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 20.5rem;
+  min-width: 16rem;
+
+  &__img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
+p.feature-block__title {
+  color: $sophisticated-blue;
+  margin: $spacing-x-small 0 $spacing-medium-light 0;
+}
+
+p.feature-block__description {
+  margin: 0;
+}
