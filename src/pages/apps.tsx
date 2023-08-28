@@ -11,6 +11,7 @@ import {
 } from "../components";
 import featuresData from "../data/features";
 import "../styles/PageStyles/apps.scss";
+import { openDemoForm } from "../utils/global";
 
 const IndexPage: React.FC<PageProps> = () => {
 
@@ -60,13 +61,7 @@ const IndexPage: React.FC<PageProps> = () => {
             type="h2"
             mobileType="h6"
           >Looking to build something amazing?  So are we.</Text>
-          <a
-            href="https://forms.monday.com/forms/e4aecd01ca582fa2f7d386930fff44ad?r=use1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button buttonLabel="request demo" onClick={() => null}/>
-          </a>
+          <Button buttonLabel="request demo" onClick={openDemoForm}/>
         </div>
       </div>
     </Layout>
