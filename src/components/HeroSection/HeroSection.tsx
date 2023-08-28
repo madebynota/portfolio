@@ -6,6 +6,7 @@ import {
 import heroImg from "../../images/hero-img-placeholder.png";
 import logo from "../../images/dialup-retro-logo.png";
 import "./HeroSection.scss";
+import { openDemoForm } from "../../utils/global";
 
 export const HeroSection = () => (
     <section className="root">
@@ -19,7 +20,7 @@ export const HeroSection = () => (
             <Text type="p+">
               Dial Up is powering the next generation of event apps for organizers and attendees
             </Text> 
-            <Button buttonLabel="request demo" onClick={() => alert("Email us at hello@dialup.digital")} />
+            <Button buttonLabel="request demo" onClick={openDemoForm} />
           </div>
           <div className="image-section">
             <img src={heroImg} />

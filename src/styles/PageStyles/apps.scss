@@ -1,0 +1,50 @@
+@import "../breakpoints.scss";
+@import "../variables.scss";
+
+.apps-container {
+  padding: $spacing-x-large 0;
+}
+
+.demo-section {
+  background-color: $white;
+  padding: $spacing-medium-plus 0;
+
+  & .site-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__header.text {
+    color: $dream-blue;
+    max-width: 1100px;
+    margin-top: 0;
+  }
+}
+
+.feature-section {
+  background-color: $black;
+  text-align: center;
+  padding: $spacing-x-large 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17.5rem, 20.5rem));
+    gap: $spacing-x-large;
+    justify-content: center;
+
+    @include breakpoint('mobile') {
+      display: flex;
+      overflow-x: scroll;
+      gap: $spacing-medium;
+      justify-content: flex-start;
+    }
+  }
+
+  &__header.text {
+    margin-top: 0;
+    color: $sophisticated-blue;
+  }
+}

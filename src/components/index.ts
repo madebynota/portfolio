@@ -1,4 +1,5 @@
 export { Button } from "./Button/Button";
+export { FeatureBlock } from "./FeatureBlock/FeatureBlock";
 export { Footer } from "./Footer/Footer";
 export { Header } from "./Header/Header";
 export { HeroSection } from "./HeroSection/HeroSection";
