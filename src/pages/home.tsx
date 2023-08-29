@@ -1,10 +1,10 @@
 import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { AppsPage, SEO } from "../components";
+import { HomePage, SEO } from "../components";
 import "../styles/global.scss";
 
-const AppsRoutePage: React.FC<PageProps> = props => <AppsPage {...props} />;
+const HomeRoutePage: React.FC<PageProps> = props => <HomePage {...props} />;
 
-export default AppsRoutePage
+export default HomeRoutePage
 
 export const Head: HeadFC = () => <SEO />
