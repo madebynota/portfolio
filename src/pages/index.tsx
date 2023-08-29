@@ -1,10 +1,11 @@
 import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { HomePage, SEO } from "../components";
+import { AppsPage, HomePage, SEO } from "../components";
 import "../styles/global.scss";
 
 const IndexPage: React.FC<PageProps> = props => {
-  return <HomePage {...props} />
+  console.log("VALUE", process.env.GATSBY_INDEX_PAGE_MODE);
+  return process.env.GATSBY_INDEX_PAGE_MODE === "apps" ? <AppsPage {...props} /> : <HomePage {...props} />;
 }
 
 export default IndexPage

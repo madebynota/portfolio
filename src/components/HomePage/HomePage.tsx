@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import { SEO, Text } from "../../components";
+import type { PageProps } from "gatsby";
+import { Text } from "../../components";
 import logo from "../../images/dialup-retro-logo.png";
 import "../../styles/global.scss";
 
