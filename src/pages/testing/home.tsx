@@ -1,7 +1,7 @@
 import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { HomePage, SEO } from "../components";
-import "../styles/global.scss";
+import { HomePage, SEO } from "../../components";
+import "../../styles/global.scss";
 
 const HomeRoutePage: React.FC<PageProps> = props => <HomePage {...props} />;
 
