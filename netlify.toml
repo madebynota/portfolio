@@ -1,5 +1,0 @@
-[[redirects]]
-  from = “https://apps.dialup.digital/*”
-  to = “https://dialup.digital/apps/:splat”
-  status = 200
-  force = true
