@@ -14,6 +14,9 @@ import { useEffect, useMemo, useState } from 'react';
  *    useMediaQuery('@media only screen and (min-width: 600px)');
  */
 export const useMediaQuery = (mediaQueryString: string): boolean => {
+  const isBrowser = () => typeof window !== "undefined"
+  if (!isBrowser()) return false;
+  
   const queryString = removeReservedMediaKeyWord(mediaQueryString);
   const query = useMemo(() => window.matchMedia(queryString), [queryString]);
   const [matches, setMatches] = useState(query.matches);
