@@ -1,5 +1,5 @@
 import React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import type { PageProps } from "gatsby";
 import {
   Button,
   FeatureBlock,
@@ -8,12 +8,12 @@ import {
   Layout,
   SEO,
   Text,
-} from "../components";
-import featuresData from "../data/features";
-import "../styles/PageStyles/apps.scss";
-import { openDemoForm } from "../utils/global";
+} from "../../components";
+import featuresData from "../../data/features";
+import "../../styles/PageStyles/apps.scss";
+import { openDemoForm } from "../../utils/global";
 
-const IndexPage: React.FC<PageProps> = () => {
+export const AppsPage: React.FC<PageProps> = () => {
 
   return (
     <Layout hasHeader={false}>
@@ -67,7 +67,3 @@ const IndexPage: React.FC<PageProps> = () => {
     </Layout>
   );
 }
-
-export default IndexPage
-
-export const Head: HeadFC = () => <SEO />
