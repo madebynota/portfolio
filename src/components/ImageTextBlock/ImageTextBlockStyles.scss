@@ -26,7 +26,6 @@
     flex-direction: row-reverse;
 
     .image-text-block__text {
-      text-align: right;
       padding-right: 0;
       padding-left: $spacing-large;
 
@@ -39,6 +38,10 @@
 
   & + & {
     margin-top: $spacing-x-large;
+
+    @include breakpoint('mobile') {
+      margin-top: $spacing-medium;
+    }
   }
 
   @include breakpoint('mobile') {
