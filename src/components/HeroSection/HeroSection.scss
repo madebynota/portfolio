@@ -1,9 +1,31 @@
 @import "../../styles/variables.scss";
 @import "../../styles/breakpoints.scss";
 
-.root {
+.hero {
   background: $black;
   display: flex;
+  position: relative;
+
+  &__bg {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  & .site-section {
+    z-index: 1;
+  }
 }
 
 .content-grid {
@@ -16,20 +38,52 @@
   flex: 1;
   gap: $spacing-x-small;
   margin: $spacing-large 0;
+  z-index: 1;
 
   @include breakpoint('mobile') {
     grid-template-columns: 1fr;
     margin: $spacing-x-small 0;
+    column-gap: 0;
   }
 }
 
 .text-section {
   grid-area: text;
   align-self: end;
+
+  @include breakpoint('mobile') {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
 }
 
-.headline {
-  margin-bottom: $spacing-medium;
+.subheadline.text {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+@include breakpoint('mobile') {
+  .headline.text {
+    margin-bottom: $spacing-medium;
+  }
+  
+  .headline,
+  .subheadline {
+    text-align: center;
+  }
+}
+
+.mobile-image-section {
+  display: none;
+
+  img {
+    width: 100%;
+  }
+
+  @include breakpoint('mobile') {
+    display: block;
+  }
 }
 
 .image-section {
@@ -49,5 +103,6 @@
 
   @include breakpoint('mobile') {
     height: 1.5rem;
+
   }
 }
