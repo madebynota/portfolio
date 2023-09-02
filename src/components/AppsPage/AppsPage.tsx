@@ -9,7 +9,7 @@ import {
   SEO,
   Text,
 } from "../../components";
-import featuresData from "../../data/features";
+import { appsPageData, featuresData } from "../../data";
 import "../../styles/PageStyles/apps.scss";
 import { openDemoForm } from "../../utils/global";
 
@@ -19,21 +19,14 @@ export const AppsPage: React.FC<PageProps> = () => {
     <Layout hasHeader={false}>
       <HeroSection />
       <main className="apps-container">
-        <ImageTextBlock
-          label="WHAT WE DO"
-          header="Festival Apps with Style"
-          body="Offering mobile applications that engage fans and improve the festival experience with thoughtful design methodology and industry-standard development practices."
-        />
-        <ImageTextBlock
-          label="WHO WE ARE"
-          header="Creative Technologists Building for Creative Events"
-          body="Sumn about the team, who we are, what we're into and what we like building or something?"
-        />
-        <ImageTextBlock
-          label="HOW IT'S GOING"
-          header="Demonstrated Success on  Stages Big and Small"
-          body="More about the metrics, downloads, reviews, praise we've gotten"
-        />
+        { appsPageData.map(block => (
+          <ImageTextBlock
+            key={block.label}
+            label={block.label}
+            header={block.header}
+            body={block.body}
+          />
+        ))}
       </main>
       <div className="feature-section">
         <div className="site-section">
