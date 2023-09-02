@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TextProps } from "./TextTypes";
 import { useMediaQuery } from "../../hooks/use-media-query";
 
@@ -20,11 +20,12 @@ export const Text: React.FC<TextProps> = ({
   type = "p",
   ...restProps
 }) => {
-  let textType = type;
-  if (mobileType) {
-    const isMobile = useMediaQuery("(max-width: 768px)");
-    textType = isMobile && mobileType ? mobileType : type;
-  }
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [textType, setTextType] = useState(type);
+
+  useEffect(() => {
+    setTextType(mobileType && isMobile ? mobileType : type);
+  }, [mobileType && isMobile]);
 
   return (
     <p className={`text ${mapTypeToClassName(textType)} ${className}`} {...restProps}>{children}</p>
