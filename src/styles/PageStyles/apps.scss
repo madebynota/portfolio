@@ -24,10 +24,54 @@
   }
 }
 
+.carousel__indicator-dot {
+  background-color: $white;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  opacity: 0.55;
+  transition: 0.3s;
+
+  &.active {
+    background-color: $sophisticated-blue;
+    opacity: 1;
+    scale: 1.1;
+  }
+
+  & + & {
+    margin-left: $spacing-x-small;
+  }
+}
+
 .feature-section {
   background-color: $black;
   text-align: center;
   padding: $spacing-x-large 0;
+
+  &__carousel {
+    display: none;
+
+    @include breakpoint('mobile') {
+      display: block;
+    }
+
+    .carousel.carousel-slider {
+      display: flex;
+      flex-flow: column-reverse;
+
+      & .control-dots {
+        position: relative;
+        margin: 0;
+        margin-top: $spacing-medium;
+      }
+
+      & .feature-block {
+        margin: 0 auto;
+      }
+    }
+  }
 
   &__grid {
     display: grid;
@@ -36,15 +80,16 @@
     justify-content: center;
 
     @include breakpoint('mobile') {
-      display: flex;
-      overflow-x: scroll;
-      gap: $spacing-medium;
-      justify-content: flex-start;
+      display: none;
     }
   }
 
   &__header.text {
     margin-top: 0;
     color: $sophisticated-blue;
+
+    @include breakpoint('mobile') {
+      margin-bottom: $spacing-medium;
+    }
   }
 }
