@@ -1,11 +1,18 @@
+@import "../../styles/breakpoints.scss";
 @import "../../styles/variables";
 
 .button {
+  box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
   padding: $spacing-x-small $spacing-large;
   transition: opacity 0.2s;
   margin: $spacing-medium 0;
+
+  @include breakpoint('mobile') {
+    display: block;
+    width: 100%;
+  }
 
   & .button-label {
     text-align: center;
