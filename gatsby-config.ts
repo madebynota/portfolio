@@ -41,7 +41,7 @@ const config: GatsbyConfig = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-FLLR54HQWF", // Google Analytics / GA
+          process.env.GATSBY_INDEX_PAGE_MODE == "company" ? "G-ZV80GEKZHW" : "G-FLLR54HQWF", // Google Analytics / GA
         ],
       },
     },
