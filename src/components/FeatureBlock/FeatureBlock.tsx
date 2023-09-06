@@ -13,6 +13,7 @@ export const FeatureBlock: React.FC<FeatureBlockProps> = ({
     <Text
       className="feature-block__title"
       type="h6"
+      mobileType="p+"
     >{title}</Text>
     <Text
       className="feature-block__description"

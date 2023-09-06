@@ -12,23 +12,9 @@ import {
 import { appsPageData, featuresData } from "../../data";
 import "../../styles/PageStyles/apps.scss";
 import { openDemoForm } from "../../utils/global";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel, CarouselProps } from "react-responsive-carousel";
+import Carousel from "nuka-carousel"
 
 export const AppsPage: React.FC<PageProps> = () => {
-  const renderCarouselIndicator: CarouselProps['renderIndicator'] = (
-    clickHandler,
-    isSelected,
-    index,
-    label,
-  ) => {
-    return (
-      <div
-        onClick={clickHandler}
-        className={`carousel__indicator-dot ${isSelected ? 'active' : ''}`}
-      ></div>
-    );
-  }
 
   return (
     <Layout hasHeader={false}>
@@ -62,15 +48,12 @@ export const AppsPage: React.FC<PageProps> = () => {
           </div>
           <div className="feature-section__carousel">
             <Carousel
-              autoPlay={true}
-              interval={5000}
-              swipeable={true}
-              emulateTouch={true}
-              infiniteLoop={true}
-              showThumbs={false}
-              showArrows={false}
-              showStatus={false}
-              renderIndicator={renderCarouselIndicator}
+              defaultControlsConfig={{
+                prevButtonStyle: {display: 'none'},
+                nextButtonStyle: {display: 'none'},
+                pagingDotsContainerClassName: 'paging-dot__container',
+                pagingDotsClassName: 'carousel__indicator-dot',
+              }}
             >
             {featuresData.map(feature => (
               <FeatureBlock
