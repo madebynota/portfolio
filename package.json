@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "dev:mobile": "gatsby develop -H 0.0.0.0 -p 8000 -o",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
