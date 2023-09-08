@@ -24,24 +24,33 @@
   }
 }
 
-.carousel__indicator-dot {
-  background-color: $white;
-  border-radius: 100%;
-  cursor: pointer;
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  opacity: 0.55;
-  transition: 0.3s;
+.paging-dot__container {
+  top: 0 !important;
+  position: relative;
+  margin-top: $spacing-medium !important;
 
-  &.active {
-    background-color: $sophisticated-blue;
+  li.active .carousel__indicator-dot {
+    background-color: $sophisticated-blue !important;
     opacity: 1;
     scale: 1.1;
   }
 
-  & + & {
+  li + li {
     margin-left: $spacing-x-small;
+  }
+
+  button.carousel__indicator-dot {
+    background-color: $white !important;
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: 0.3s;
+  
+    svg {
+      display: none;
+    }
   }
 }
 
@@ -55,6 +64,19 @@
 
     @include breakpoint('mobile') {
       display: block;
+    }
+
+    .slider-container {
+      display: flex;
+      flex-flow: column-reverse;
+
+      div {
+        position: relative !important;
+      }
+
+      & .feature-block {
+        margin: 0 auto;
+      }
     }
 
     .carousel.carousel-slider {
