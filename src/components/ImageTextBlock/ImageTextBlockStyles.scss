@@ -9,7 +9,7 @@
     flex: 1;
     padding-right: $spacing-large;
 
-    @include breakpoint('mobile') {
+    @include breakpoint("mobile") {
       padding: 0;
     }
 
@@ -29,7 +29,7 @@
       padding-right: 0;
       padding-left: $spacing-large;
 
-      @include breakpoint('mobile') {
+      @include breakpoint("mobile") {
         padding: 0;
         text-align: left;
       }
@@ -39,12 +39,12 @@
   & + & {
     margin-top: $spacing-x-large;
 
-    @include breakpoint('mobile') {
+    @include breakpoint("mobile") {
       margin-top: $spacing-medium;
     }
   }
 
-  @include breakpoint('mobile') {
+  @include breakpoint("mobile") {
     display: block;
   }
 

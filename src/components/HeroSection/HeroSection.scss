@@ -15,14 +15,14 @@
     justify-content: center;
     align-items: center;
     z-index: 0;
-  
+
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
     }
   }
-  
+
   & .site-section {
     z-index: 1;
   }
@@ -40,7 +40,7 @@
   margin: $spacing-large 0;
   z-index: 1;
 
-  @include breakpoint('mobile') {
+  @include breakpoint("mobile") {
     grid-template-columns: 1fr;
     margin: $spacing-x-small 0;
     column-gap: 0;
@@ -51,7 +51,7 @@
   grid-area: text;
   align-self: end;
 
-  @include breakpoint('mobile') {
+  @include breakpoint("mobile") {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -63,11 +63,11 @@
   margin-bottom: 0;
 }
 
-@include breakpoint('mobile') {
+@include breakpoint("mobile") {
   .headline.text {
     margin-bottom: $spacing-medium;
   }
-  
+
   .headline,
   .subheadline {
     text-align: center;
@@ -81,7 +81,7 @@
     width: 100%;
   }
 
-  @include breakpoint('mobile') {
+  @include breakpoint("mobile") {
     display: block;
   }
 }
@@ -92,7 +92,7 @@
   justify-content: center;
   align-items: center;
 
-  @include breakpoint('mobile') {
+  @include breakpoint("mobile") {
     display: none;
   }
 }
@@ -101,8 +101,7 @@
   grid-area: logo;
   height: 3rem;
 
-  @include breakpoint('mobile') {
+  @include breakpoint("mobile") {
     height: 1.5rem;
-
   }
 }

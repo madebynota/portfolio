@@ -10,9 +10,15 @@ export const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
 }) => (
   <section className="site-section image-text-block">
     <div className="image-text-block__text">
-      <Text className="image-text-block__text-label" type="p+">{label}</Text>
-      <Text type="h3" mobileType="h5">{header}</Text>
-      <Text type="p+" mobileType="p">{body}</Text>
+      <Text className="image-text-block__text-label" type="p+" mobileType="p">
+        {label}
+      </Text>
+      <Text type="h4" mobileType="h5">
+        {header}
+      </Text>
+      <Text type="p" mobileType="p">
+        {body}
+      </Text>
     </div>
     <div className="image-text-block__image">
       <div className="image-placeholder">img</div>
