@@ -26,6 +26,7 @@ export const AppsPage: React.FC<PageProps> = () => {
             label={block.label}
             header={block.header}
             body={block.body}
+            image={block.image}
           />
         ))}
       </main>

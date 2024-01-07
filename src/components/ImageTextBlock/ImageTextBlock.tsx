@@ -7,6 +7,7 @@ export const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
   label,
   header,
   body,
+  image,
 }) => (
   <section className="site-section image-text-block">
     <div className="image-text-block__text">
@@ -21,7 +22,7 @@ export const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
       </Text>
     </div>
     <div className="image-text-block__image">
-      <div className="image-placeholder">img</div>
+      <img src={image} />
     </div>
   </section>
 );

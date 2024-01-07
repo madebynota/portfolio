@@ -13,4 +13,9 @@ export type ImageTextBlockProps = {
    * The body text for the block
    */
   body: string;
+
+  /**
+   * The image for the block
+   */
+  image: string;
 };
