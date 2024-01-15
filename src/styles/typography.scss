@@ -13,7 +13,7 @@
 }
 
 @mixin headingText {
-  color: $white;
+  color: $bic_off_white;
   font-family: "Omnes";
   font-weight: 700;
   line-height: 100%;
@@ -21,7 +21,7 @@
 }
 
 @mixin bodyText {
-  color: $white;
+  color: $bic_off_white;
   font-family: "Operator Mono";
   font-weight: 350;
   line-height: 125%;

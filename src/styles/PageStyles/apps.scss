@@ -6,7 +6,7 @@
 }
 
 .demo-section {
-  background-color: $white;
+  background-color: $bic_off_white;
   padding: $spacing-medium-plus 0;
 
   & .site-section {
@@ -18,7 +18,7 @@
   }
 
   &__header.text {
-    color: $dream-blue;
+    color: $bic-black;
     max-width: 1100px;
     margin-top: 0;
   }
@@ -55,7 +55,7 @@
 }
 
 .feature-section {
-  background-color: $black;
+  background-color: $bic_black;
   text-align: center;
   padding: $spacing-x-large 0;
 
@@ -108,7 +108,7 @@
 
   &__header.text {
     margin-top: 0;
-    color: $sophisticated-blue;
+    color: $bic_off_white;
 
     @include breakpoint('mobile') {
       margin-bottom: $spacing-medium;
