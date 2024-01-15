@@ -11,13 +11,13 @@ export const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
 }) => (
   <section className="site-section image-text-block">
     <div className="image-text-block__text">
-      <Text className="image-text-block__text-label" type="p+" mobileType="p">
+      <Text className="image-text-block__text-label" type="h4" mobileType="p">
         {label}
       </Text>
-      <Text type="h4" mobileType="h5">
+      <Text type="h2" mobileType="h5">
         {header}
       </Text>
-      <Text type="p" mobileType="p">
+      <Text type="p+" mobileType="p">
         {body}
       </Text>
     </div>

@@ -12,18 +12,47 @@
   src: url("../fonts/OperatorMono-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Proto Mono";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ProtoMono/ProtoMono-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Isonorm";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Isonorm/Isonorm-Regular.otf") format("opentype");
+}
+
 @mixin headingText {
   color: $white;
-  font-family: "Omnes";
-  font-weight: 700;
+  font-family: "Proto Mono";
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0;
+}
+
+@mixin subheadingText {
+  color: $white;
+  font-family: "Bebas Neue";
+  font-weight: 400;
   line-height: 100%;
   margin: 0;
 }
 
 @mixin bodyText {
   color: $white;
-  font-family: "Operator Mono";
-  font-weight: 350;
+  font-family: "Isonorm";
+  font-weight: 500;
   line-height: 125%;
   margin-top: $spacing-xx-small;
   margin-bottom: $spacing-xx-small;
@@ -44,14 +73,14 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  @include headingText;
+  @include subheadingText();
   font-size: $h3;
   margin-top: $spacing-medium;
   margin-bottom: $spacing-medium;
 }
 
 h4, .h4 {
-  @include headingText;
+  @include subheadingText();
   font-size: $h4;
   margin-top: $spacing-medium-light;
   margin-bottom: $spacing-medium-light;
