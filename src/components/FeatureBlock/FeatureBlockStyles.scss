@@ -1,13 +1,19 @@
 @import "../../styles/variables.scss";
 
+.feature-block-container {
+  flex: 1 0 26%;
+  text-align: center;
+}
+
 .feature-block {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 20.5rem;
+  max-width: 24.5rem;
   min-width: 16rem;
+  margin: 0 auto;
 
   &__img {
     width: 3.125rem;

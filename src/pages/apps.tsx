@@ -7,8 +7,10 @@ import {
   Layout,
   SEO,
   Text,
+  FeatureBlock,
 } from "../components";
 import "../styles/global.scss";
+import { featuresData } from "../data";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -31,6 +33,23 @@ const IndexPage: React.FC<PageProps> = () => {
           body="More about the metrics, downloads, reviews, praise we've gotten"
         />
       </main>
+      <div className="feature-section">
+        <div className="site-section">
+          <Text className="feature-section__header" type="h2" mobileType="h6">
+            Enhance your event experience
+          </Text>
+          <div className="feature-section__grid">
+            {featuresData.map((feature) => (
+              <FeatureBlock
+                iconSrc={feature.iconSrc}
+                title={feature.title}
+                description={feature.description}
+                key={feature.title}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="demo-section">
         <Text className="demo-section__header" type="h2" mobileType="h6">
           Looking to build something amazing? <br /> So are we.

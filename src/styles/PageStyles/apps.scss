@@ -55,9 +55,9 @@
 }
 
 .feature-section {
-  background-color: $black;
   text-align: center;
-  padding: $spacing-x-large 0;
+  padding: $spacing-xxx-large 0;
+  background: url('../../images/static-bg.png'), #121212;
 
   &__carousel {
     display: none;
@@ -96,10 +96,10 @@
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17.5rem, 20.5rem));
-    gap: $spacing-x-large;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    row-gap: $spacing-x-large;
 
     @include breakpoint('mobile') {
       display: none;
@@ -107,7 +107,7 @@
   }
 
   &__header.text {
-    margin-top: 0;
+    margin: 0 0 $spacing-xx-large 0;
     color: $sophisticated-blue;
 
     @include breakpoint('mobile') {
