@@ -34,7 +34,7 @@
 }
 
 @mixin headingText {
-  color: $white;
+  color: $bic_off_white;
   font-family: "Proto Mono";
   font-weight: 600;
   line-height: 100%;
@@ -50,7 +50,7 @@
 }
 
 @mixin bodyText {
-  color: $white;
+  color: $bic_off_white;
   font-family: "Isonorm";
   font-weight: 500;
   line-height: 125%;

@@ -9,6 +9,10 @@
     flex: 1;
     padding-right: $spacing-large;
 
+    .text {
+      color: $bic_black;
+    }
+
     @include breakpoint("mobile") {
       padding: 0;
     }
