@@ -1,5 +1,5 @@
-import React from 'react';
-import type { HeadFC, PageProps } from 'gatsby';
+import React from "react";
+import type { HeadFC, PageProps } from "gatsby";
 import {
   Button,
   HeroSection,
@@ -7,14 +7,14 @@ import {
   Layout,
   SEO,
   Text,
-} from '../components';
-import '../styles/global.scss';
+} from "../components";
+import "../styles/global.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <HeroSection />
-      <main style={{ padding: '64px 0' }}>
+      <main style={{ padding: "64px 0" }}>
         <ImageTextBlock
           label="WHAT WE DO"
           header="Festival Apps with Style"
@@ -32,12 +32,12 @@ const IndexPage: React.FC<PageProps> = () => {
         />
       </main>
       <div className="demo-section">
-        <Text className="demo-section__header" type="h4" mobileType="h6">
+        <Text className="demo-section__header" type="h2" mobileType="h6">
           Looking to build something amazing? <br /> So are we.
         </Text>
         <Button
           buttonLabel="request demo"
-          onClick={() => alert('Email us at hello@dialup.digital')}
+          onClick={() => alert("Email us at hello@dialup.digital")}
         />
       </div>
     </Layout>

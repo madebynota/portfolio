@@ -16,13 +16,13 @@ export const HeroSection = () => (
       <div className="content-grid">
         <img className="logo" src={logo} alt="Dial Up Logo" />
         <div className="text-section">
-          <Text className="headline" type="h2" mobileType="h4">
+          <Text className="headline" type="h1" mobileType="h4">
             Event Apps for Everyone
           </Text>
           <div className="mobile-image-section">
             <img src={mobileImg} />
           </div>
-          <Text className="subheadline" type="p+" mobileType="p">
+          <Text className="subheadline" type="h3" mobileType="p">
             Dial Up is powering the next generation of event apps for organizers
             and attendees
           </Text>
