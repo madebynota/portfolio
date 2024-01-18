@@ -34,7 +34,6 @@
 }
 
 @mixin headingText {
-  color: $bic_off_white;
   font-family: "Proto Mono";
   font-weight: 600;
   line-height: 100%;
@@ -42,7 +41,6 @@
 }
 
 @mixin subheadingText {
-  color: $white;
   font-family: "Bebas Neue";
   font-weight: 400;
   line-height: 100%;
@@ -50,7 +48,6 @@
 }
 
 @mixin bodyText {
-  color: $bic_off_white;
   font-family: "Isonorm";
   font-weight: 500;
   line-height: 125%;
