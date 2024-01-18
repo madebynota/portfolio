@@ -12,7 +12,6 @@ import {
 import { appsPageData, featuresData } from "../../data";
 import "../../styles/PageStyles/apps.scss";
 import { openDemoForm } from "../../utils/global";
-import Carousel from "nuka-carousel"
 
 export const AppsPage: React.FC<PageProps> = () => {
 
@@ -46,25 +45,6 @@ export const AppsPage: React.FC<PageProps> = () => {
                 key={feature.title}
               />
             ))}
-          </div>
-          <div className="feature-section__carousel">
-            <Carousel
-              defaultControlsConfig={{
-                prevButtonStyle: {display: 'none'},
-                nextButtonStyle: {display: 'none'},
-                pagingDotsContainerClassName: 'paging-dot__container',
-                pagingDotsClassName: 'carousel__indicator-dot',
-              }}
-            >
-            {featuresData.map(feature => (
-              <FeatureBlock
-                iconSrc={feature.iconSrc}
-                title={feature.title}
-                description={feature.description}
-                key={feature.title}
-              />
-            ))}
-            </Carousel>
           </div>
         </div>
       </div>
