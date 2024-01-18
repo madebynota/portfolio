@@ -47,25 +47,6 @@ export const AppsPage: React.FC<PageProps> = () => {
               />
             ))}
           </div>
-          <div className="feature-section__carousel">
-            <Carousel
-              defaultControlsConfig={{
-                prevButtonStyle: {display: 'none'},
-                nextButtonStyle: {display: 'none'},
-                pagingDotsContainerClassName: 'paging-dot__container',
-                pagingDotsClassName: 'carousel__indicator-dot',
-              }}
-            >
-            {featuresData.map(feature => (
-              <FeatureBlock
-                iconSrc={feature.iconSrc}
-                title={feature.title}
-                description={feature.description}
-                key={feature.title}
-              />
-            ))}
-            </Carousel>
-          </div>
         </div>
       </div>
       <div className="demo-section">

@@ -59,51 +59,11 @@
   text-align: center;
   padding: $spacing-x-large 0;
 
-  &__carousel {
-    display: none;
-
-    @include breakpoint('mobile') {
-      display: block;
-    }
-
-    .slider-container {
-      display: flex;
-      flex-flow: column-reverse;
-
-      div {
-        position: relative !important;
-      }
-
-      & .feature-block {
-        margin: 0 auto;
-      }
-    }
-
-    .carousel.carousel-slider {
-      display: flex;
-      flex-flow: column-reverse;
-
-      & .control-dots {
-        position: relative;
-        margin: 0;
-        margin-top: $spacing-medium;
-      }
-
-      & .feature-block {
-        margin: 0 auto;
-      }
-    }
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17.5rem, 20.5rem));
     gap: $spacing-x-large;
     justify-content: center;
-
-    @include breakpoint('mobile') {
-      display: none;
-    }
   }
 
   &__header.text {
