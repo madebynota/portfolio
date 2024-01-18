@@ -4,12 +4,14 @@
 .apps-page-section {
   position: relative;
   display: grid;
-  padding: 4.5rem 0;
+  padding: $spacing-xx-large 0;
 
   grid-template-columns: [full-start] minmax(0, 1fr) [grid-start] repeat(3, minmax(0, 12rem)) [center-content-start] repeat(3, minmax(0, 12rem)) [grid-end] minmax(0, 1fr) [full-end];
   gap: $spacing-medium;
 
   @include breakpoint("mobile") {
+    padding: $spacing-large 0;
+
     grid-template-columns: [full-start] minmax(0, min-content) [grid-start] repeat(2, minmax(0, 1fr)) [grid-end] minmax(0, min-content) [full-end];
     gap: $spacing-x-small;
   }

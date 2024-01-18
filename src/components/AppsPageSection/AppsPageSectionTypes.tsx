@@ -7,7 +7,7 @@ export type AppsPageSectionProps = {
   className?: string;
 
   /**
-   * Custom class(es) to apply
+   * Children that will be wrapped by this component
    */
    children?: React.ReactNode;
 };
