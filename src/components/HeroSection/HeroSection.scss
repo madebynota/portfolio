@@ -3,85 +3,44 @@
 
 .hero {
   background: $bic_black;
-  display: flex;
-  position: relative;
+  background-image: url("../../images/crowd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  &__bg {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  & .site-section {
-    z-index: 1;
-  }
+  // Creating rows in the explicit grid for the benefit of using the full possibilities of grid-row.
+  grid-template-rows: repeat(2, minmax(0, auto));
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content 1fr;
-  grid-template-areas:
-    "logo image"
-    "text image";
-  flex: 1;
-  gap: $spacing-x-small;
-  margin: $spacing-large 0;
-  z-index: 1;
+.nota-hero-logo {
+  grid-column: grid-start / span 3;
+  height: 4.25rem;
 
   @include breakpoint("mobile") {
-    grid-template-columns: 1fr;
-    margin: $spacing-x-small 0;
-    column-gap: 0;
-  }
-
-  .logo {
-    grid-area: logo;
-    height: 4.25rem;
-  
-    @include breakpoint("mobile") {
-      height: 2.5rem;
-      justify-self: center;
-    }
+    height: 2.5rem;
+    justify-self: center;
+    grid-column: grid-start / grid-end;
   }
 }
 
 .text-section {
-  grid-area: text;
+  grid-column: grid-start / span 3;
   align-self: end;
 
   @include breakpoint("mobile") {
-    display: flex;
-    flex-flow: column;
+    grid-column: grid-start / grid-end;
     align-items: center;
   }
+}
+
+.headline, .subheadline {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .subheadline.text {
   margin-top: $spacing-medium;
   margin-bottom: 0;
-}
-
-@include breakpoint("mobile") {
-  .headline.text {
-    margin-bottom: $spacing-medium;
-  }
-
-  .headline,
-  .subheadline {
-    text-align: center;
-  }
 }
 
 .mobile-image-section {
@@ -93,11 +52,13 @@
 
   @include breakpoint("mobile") {
     display: block;
+    grid-column: grid-start / grid-end;
   }
 }
 
 .image-section {
-  grid-area: image;
+  grid-column: center-content-start / grid-end;
+  grid-row: 1 / -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,5 +72,16 @@
 
   @include breakpoint("mobile") {
     display: none;
+  }
+}
+
+@include breakpoint("mobile") {
+  .headline.text {
+    margin-bottom: $spacing-medium;
+  }
+
+  .headline,
+  .subheadline {
+    text-align: center;
   }
 }

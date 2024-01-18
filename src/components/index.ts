@@ -1,4 +1,5 @@
 export { AppsPage } from "./AppsPage/AppsPage";
+export { AppsPageSection } from "./AppsPageSection/AppsPageSection";
 export { Button } from "./Button/Button";
 export { FeatureBlock } from "./FeatureBlock/FeatureBlock";
 export { Footer } from "./Footer/Footer";
