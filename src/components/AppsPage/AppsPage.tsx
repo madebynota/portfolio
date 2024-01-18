@@ -12,7 +12,6 @@ import {
 import { appsPageData, featuresData } from "../../data";
 import "../../styles/PageStyles/apps.scss";
 import { openDemoForm } from "../../utils/global";
-import Carousel from "nuka-carousel"
 
 export const AppsPage: React.FC<PageProps> = () => {
 
