@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Text } from "../../components";
-import heroImg from "../../images/hero-img-placeholder.png";
-import logo from "../../images/dialup-retro-logo.png";
-import heroBg from "../../images/noise_bg.png";
+import heroImg from "../../images/2021_app_lineup.png";
+import logo from "../../images/logo.svg";
+import heroBg from "../../images/crowd.jpg";
 import mobileImg from "../../images/mobile_hero.png";
 import "./HeroSection.scss";
 import { openDemoForm } from "../../utils/global";
@@ -14,16 +14,16 @@ export const HeroSection = () => (
     </div>
     <div className="site-section">
       <div className="content-grid">
-        <img className="logo" src={logo} alt="Dial Up Logo" />
+        <img className="logo" src={logo} alt="Nota Logo" />
         <div className="text-section">
-          <Text className="headline" type="h1" mobileType="h4">
+          <Text className="headline" type="h1" mobileType="h3">
             Event Apps for Everyone
           </Text>
           <div className="mobile-image-section">
             <img src={mobileImg} />
           </div>
           <Text className="subheadline" type="h3" mobileType="p">
-            Dial Up is powering the next generation of event apps for organizers
+            Nota is powering the next generation of event apps for organizers
             and attendees
           </Text>
           <Button buttonLabel="request demo" onClick={openDemoForm} />

@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
     onClick={onClick}
     {...restProps}
   >
-    <Text type="h6" className="button-label">
+    <Text type="h4" className="button-label">
       {buttonLabel}
     </Text>
   </div>

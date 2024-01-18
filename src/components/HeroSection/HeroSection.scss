@@ -2,7 +2,7 @@
 @import "../../styles/breakpoints.scss";
 
 .hero {
-  background: $black;
+  background: $bic_black;
   display: flex;
   position: relative;
 
@@ -44,6 +44,16 @@
     grid-template-columns: 1fr;
     margin: $spacing-x-small 0;
     column-gap: 0;
+  }
+
+  .logo {
+    grid-area: logo;
+    height: 4.25rem;
+  
+    @include breakpoint("mobile") {
+      height: 2.5rem;
+      justify-self: center;
+    }
   }
 }
 
@@ -91,17 +101,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 75vh;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 
   @include breakpoint("mobile") {
     display: none;
-  }
-}
-
-.logo {
-  grid-area: logo;
-  height: 3rem;
-
-  @include breakpoint("mobile") {
-    height: 1.5rem;
   }
 }
