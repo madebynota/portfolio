@@ -18,7 +18,7 @@ export const AppsPage: React.FC<PageProps> = () => {
   return (
     <Layout hasHeader={false}>
       <HeroSection />
-      <main className="apps-container">
+      <div className="apps-container">
         { appsPageData.map(block => (
           <ImageTextBlock
             key={block.label}
@@ -28,7 +28,7 @@ export const AppsPage: React.FC<PageProps> = () => {
             image={block.image}
           />
         ))}
-      </main>
+      </div>
       <div className="feature-section">
         <div className="site-section">
           <Text
