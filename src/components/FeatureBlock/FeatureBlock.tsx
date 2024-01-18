@@ -2,6 +2,7 @@ import React from "react";
 import { Text } from "../Text/Text";
 import "./FeatureBlockStyles.scss";
 import { FeatureBlockProps } from "./FeatureBlockTypes";
+import { ReactSVG } from 'react-svg'
 
 export const FeatureBlock: React.FC<FeatureBlockProps> = ({
   iconSrc,
@@ -9,7 +10,14 @@ export const FeatureBlock: React.FC<FeatureBlockProps> = ({
   description,
 }) => (
   <div className="feature-block">
-    <img src={iconSrc} className="feature-block__img" />
+    <ReactSVG
+      src={iconSrc}
+      className="feature-block__img"
+      beforeInjection={(svg) => {
+        svg.setAttribute('width', '')
+        svg.setAttribute('height', '')
+      }}
+    />
     <Text
       className="feature-block__title"
       type="h6"
