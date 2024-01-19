@@ -1,18 +1,40 @@
 import React from "react";
-import { Text } from "../Text/Text";
+import { AppsPageSection, Text } from "../../components";
+import logo from "../../images/logo.svg";
 import "./FooterStyles.scss";
 
 export const Footer: React.FC = () => (
-  <footer className="site-section footer">
-    <a href="mailto:hello@dialup.digital">
-      <Text type="p" mobileType="p-">
-        hell0@dialup.digital
+  <AppsPageSection className="nota-footer">
+    <img className="nota-footer-logo" src={logo} alt="Nota Logo" />
+    <div className="divider-line" />
+    <div className="more-info">
+      <p className="footer-section-title">More Info</p>
+      <a href="">
+        <Text type="p">
+          Terms & Conditions
+        </Text>
+      </a>
+      <a href="">
+        <Text type="p">
+          Privacy Policy
+        </Text>
+      </a>
+    </div>
+    <div className="contact-details">
+      <p className="footer-section-title">Contact Us</p>
+      <a href="mailto:hello@madebynota.com">
+        <Text className="footer-ellipsize" type="p">
+          hello@madebynota.com
+        </Text>
+      </a>
+    </div>
+    <div className="copyright-details">
+      <Text className="footer-ellipsize" type="p">
+        NOTA ©️ 2024
       </Text>
-    </a>
-    <a href="https://www.instagram.com/dialup.digital" target="_blank">
-      <Text type="p" mobileType="p-">
-        @dialup.digital
+      <Text className="footer-ellipsize" type="p">
+        ALL RIGHTS RESERVED
       </Text>
-    </a>
-  </footer>
+    </div>
+  </AppsPageSection>
 );

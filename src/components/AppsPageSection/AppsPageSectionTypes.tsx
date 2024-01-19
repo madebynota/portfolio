@@ -9,5 +9,10 @@ export type AppsPageSectionProps = {
   /**
    * Children that will be wrapped by this component
    */
-   children?: React.ReactNode;
+  children?: React.ReactNode;
+
+   /**
+   * Type of root element for component rendering
+   */
+  asElementType?: 'section' | 'footer';
 };
