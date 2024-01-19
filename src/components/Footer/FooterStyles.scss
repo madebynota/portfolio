@@ -1,14 +1,64 @@
 @import '../../styles/variables';
+@import "../../styles/breakpoints.scss";
 
-footer.footer {
+.nota-footer {
   background-color: $bic_black;
-  display: flex;
-  justify-content: space-between;
-  max-width: 100vw;
-  width: 100%;
-  padding: 0 $spacing-small;
 
   a {
     margin: 0;
+    text-decoration: none;
+    color: $bic_off_white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.divider-line {
+  grid-column: 4;
+  width: 0;
+  justify-self: center;
+  border: 1px solid $bic_off_white;
+
+  @include breakpoint("mobile") {
+    display: none;
+  }
+}
+
+.footer-section-title {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.footer-ellipsize {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nota-footer-logo {
+  grid-column: grid-start / span 2;
+
+  @include breakpoint("mobile") {
+    grid-column: grid-start;
+  }
+}
+
+.more-info {
+  grid-column: center-content-start;
+}
+
+.contact-details {
+  grid-column: 6;
+}
+
+.copyright-details {
+  grid-column: 7;
+}
+
+.more-info, .contact-details, .copyright-details {
+  @include breakpoint("mobile") {
+    grid-column: grid-start / grid-end;
   }
 }
