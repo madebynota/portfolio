@@ -4,7 +4,7 @@ import logo from "../../images/logo.svg";
 import "./FooterStyles.scss";
 
 export const Footer: React.FC = () => (
-  <AppsPageSection className="nota-footer">
+  <AppsPageSection asElementType="footer" className="nota-footer">
     <img className="nota-footer-logo" src={logo} alt="Nota Logo" />
     <div className="divider-line" />
     <div className="more-info">
