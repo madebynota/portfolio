@@ -1,9 +1,9 @@
-import messageIcon from "../images/icons/ic_message.png";
-import wifiDisconnectedIcon from "../images/icons/ic_wifi_disconnected.png";
-import sponsorIcon from "../images/icons/ic_sponsor.png";
-import liveIcon from "../images/icons/ic_live.png";
-import scheduleIcon from "../images/icons/ic_schedule.png";
-import gamingIcon from "../images/icons/ic_gaming.png";
+import messageIcon from "../images/icons/ic_message.svg";
+import offlineIcon from "../images/icons/ic_offline.svg";
+import sponsorIcon from "../images/icons/ic_ad.svg";
+import liveIcon from "../images/icons/ic_live.svg";
+import scheduleIcon from "../images/icons/ic_schedule.svg";
+import themeIcon from "../images/icons/ic_theme.svg";
 
 const featuresData = [
   {
@@ -12,7 +12,7 @@ const featuresData = [
     description: "Engage with your audience in real time to send important updates, announcements, and engaging content",
   },
   {
-    iconSrc: wifiDisconnectedIcon,
+    iconSrc: offlineIcon,
     title: "Offline Support",
     description: "Access schedules, maps, and more without an internet connection. Attendees stay informed wherever they go",
   },
@@ -32,7 +32,7 @@ const featuresData = [
     description: "Attendees maximize their experience with personalized schedules, catching every performance that matters",
   },
   {
-    iconSrc: gamingIcon,
+    iconSrc: themeIcon,
     title: "Thematic Immersion",
     description: "Craft custom and immersive experiences for attendees that seamlessly align with the festival’s theme",
   },
