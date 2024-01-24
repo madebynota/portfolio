@@ -14,12 +14,11 @@ import "../../styles/PageStyles/apps.scss";
 import { openDemoForm } from "../../utils/global";
 
 export const AppsPage: React.FC<PageProps> = () => {
-
   return (
     <Layout hasHeader={false}>
       <HeroSection />
       <div className="apps-container">
-        { appsPageData.map(block => (
+        {appsPageData.map(block => (
           <ImageTextBlock
             key={block.label}
             label={block.label}
@@ -31,11 +30,9 @@ export const AppsPage: React.FC<PageProps> = () => {
       </div>
       <div className="feature-section">
         <div className="site-section">
-          <Text
-            className="feature-section__header"
-            type="h3"
-            mobileType="h6"
-          >Enhance your event experience</Text>
+          <Text className="feature-section__header" type="h3" mobileType="h6">
+            Enhance your event experience
+          </Text>
           <div className="feature-section__grid">
             {featuresData.map(feature => (
               <FeatureBlock
@@ -50,14 +47,12 @@ export const AppsPage: React.FC<PageProps> = () => {
       </div>
       <div className="demo-section">
         <div className="site-section">
-          <Text
-            className="demo-section__header"
-            type="h2"
-            mobileType="h6"
-          >Looking to build something amazing?  So are we.</Text>
-          <Button buttonLabel="request demo" onClick={openDemoForm}/>
+          <Text className="demo-section__header" type="h2" mobileType="h6">
+            Looking to build something ? So are we.
+          </Text>
+          <Button buttonLabel="request demo" onClick={openDemoForm} />
         </div>
       </div>
     </Layout>
   );
-}
+};
