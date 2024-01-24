@@ -75,6 +75,21 @@ body {
   }
 }
 
+.demo-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  br {
+    margin-bottom: calc($spacing-x-small / 4);
+  }
+  .demo-section__header {
+    margin-bottom: $spacing-small;
+  }
+}
+
 .footer {
   flex-shrink: 0;
   text-transform: uppercase;
@@ -111,5 +126,16 @@ body {
 
   .demo-section {
     padding: $spacing-small;
+
+    .button {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      * {
+        font-size: 24px;
+      }
+    }
   }
 }
