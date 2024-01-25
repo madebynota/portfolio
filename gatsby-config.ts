@@ -9,7 +9,7 @@ const isAppsSite = process.env.GATSBY_INDEX_PAGE_MODE == "apps";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: isAppsSite ? "Nota" : "Dial Up Digital",
-    siteUrl: isAppsSite ? "https://madebynota" : "https://dialup.digital",
+    siteUrl: isAppsSite ? "https://madebynota.com" : "https://dialup.digital",
     image: "/embed-image.png",
     description: 'We create unique digital experiences at the intersection of music, technology, and culture.',
     ogImageWidth: 600,
