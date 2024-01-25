@@ -4,10 +4,12 @@ require("dotenv").config({
   path: `.env`,
 });
 
+const isAppsSite = process.env.GATSBY_INDEX_PAGE_MODE == "apps";
+
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `DIAL UP DIGITAL`,
-    siteUrl: `https://dialup.digital`,
+    title: isAppsSite ? "Nota" : "Dial Up Digital",
+    siteUrl: isAppsSite ? "https://madebynota" : "https://dialup.digital",
     image: "/embed-image.png",
     description: 'We create unique digital experiences at the intersection of music, technology, and culture.',
     ogImageWidth: 600,
@@ -23,12 +25,13 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "DIAL UP DIGITAL",
-        short_name: "DIAL UP DIGITAL",
+        name: isAppsSite ? "Nota" : "DIAL UP DIGITAL",
+        short_name: isAppsSite ? "Nota" : "DIAL UP DIGITAL",
         start_url: ".",
         background_color: "#ffffff",
         theme_color: "#000000",
         display: 'minimal-ui',
+        // TODO: Update so that deploys of the DUD portfolio site use the original DUD favicon.
         icon: "src/images/favicon.png", // This path is relative to the root of the site.
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
@@ -41,7 +44,7 @@ const config: GatsbyConfig = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          process.env.GATSBY_INDEX_PAGE_MODE == "company" ? "G-ZV80GEKZHW" : "G-FLLR54HQWF", // Google Analytics / GA
+          isAppsSite ? "G-FLLR54HQWF" : "G-ZV80GEKZHW", // Google Analytics / GA
         ],
       },
     },
