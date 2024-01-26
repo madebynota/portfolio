@@ -1,7 +1,7 @@
 $breakpoints: (
-  'mobile':  767px,
-  'medium-desktop': 992px,
-  'large-desktop':  1200px
+  'mobile':  (0px, 767px),
+  'medium-desktop': (768px, 992px),
+  'large-desktop':  (993px, 999999px)
 ) !default;
 
 /// Cool media query mixin from
@@ -17,7 +17,10 @@ $breakpoints: (
   // Check for key in the breakpoints map
   @if map-has-key($breakpoints, $breakpoint) {
     // create a media query based on the value
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @media
+      (min-width: nth(map-get($breakpoints, $breakpoint), 1)) and
+      (max-width: nth(map-get($breakpoints, $breakpoint), 2))
+    {
       @content;
     }
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import type { PageProps } from "gatsby";
 import {
+  AppsPageSection,
   Button,
   FeatureBlock,
   HeroSection,
@@ -29,25 +30,21 @@ export const AppsPage: React.FC<PageProps> = () => {
           />
         ))}
       </div>
-      <div className="feature-section">
-        <div className="site-section">
-          <Text
-            className="feature-section__header"
-            type="h3"
-            mobileType="h6"
-          >Enhance your event experience</Text>
-          <div className="feature-section__grid">
-            {featuresData.map(feature => (
-              <FeatureBlock
-                iconSrc={feature.iconSrc}
-                title={feature.title}
-                description={feature.description}
-                key={feature.title}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <AppsPageSection className="feature-section">
+        <Text
+          className="feature-section__header"
+          type="h2"
+          mobileType="h5"
+        >Enhance your event experience</Text>
+        {featuresData.map(feature => (
+          <FeatureBlock
+            iconSrc={feature.iconSrc}
+            title={feature.title}
+            description={feature.description}
+            key={feature.title}
+          />
+        ))}
+      </AppsPageSection>
       <div className="demo-section">
         <div className="site-section">
           <Text
