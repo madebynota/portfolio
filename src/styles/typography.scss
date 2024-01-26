@@ -100,6 +100,7 @@ h6, .h6 {
 .p_large {
   @include bodyText;
   font-size: $p-large;
+  line-height: 125%;
 }
 
 p, .p {
