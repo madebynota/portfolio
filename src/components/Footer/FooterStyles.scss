@@ -37,11 +37,11 @@
   white-space: nowrap;
 }
 
-.nota-footer-logo {
+.nota-footer-logo-container {
   grid-column: grid-start / span 2;
 
   @include breakpoint("mobile") {
-    grid-column: grid-start;
+    grid-column: grid-start / span 1;
   }
 }
 
