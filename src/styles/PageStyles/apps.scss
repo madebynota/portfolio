@@ -56,22 +56,16 @@
 
 .feature-section {
   background-color: $bic_black;
-  text-align: center;
-  padding: $spacing-x-large 0;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17.5rem, 20.5rem));
-    gap: $spacing-x-large;
-    justify-content: center;
+  &.apps-page-section {
+    padding: $spacing-xxx-large 0;
   }
 
   &__header.text {
+    grid-column: grid-start / grid-end;
     margin-top: 0;
+    margin-bottom: $spacing-large;
     color: $bic_off_white;
-
-    @include breakpoint('mobile') {
-      margin-bottom: $spacing-medium;
-    }
+    text-align: center;
   }
 }
