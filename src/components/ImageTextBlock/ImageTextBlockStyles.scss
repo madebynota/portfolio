@@ -13,6 +13,20 @@
       color: $bic_black;
     }
 
+    .h4 {
+      margin-top: 0;
+      margin-bottom: $spacing-medium;
+    }
+
+    .h2 {
+      margin-top: 0;
+      margin-bottom: $spacing-x-small;
+    }
+
+    .p_large {
+      margin-top: 0;
+    }
+
     @include breakpoint("mobile") {
       padding: 0;
     }
@@ -28,6 +42,8 @@
     img {
       width: 100%;
       height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.25);
     }
   }
 
