@@ -5,7 +5,9 @@ import "./FooterStyles.scss";
 
 export const Footer: React.FC = () => (
   <AppsPageSection asElementType="footer" className="nota-footer">
-    <img className="nota-footer-logo" src={logo} alt="Nota Logo" />
+    <div className="nota-footer-logo-container">
+      <img src={logo} alt="Nota Logo" />
+    </div>
     <div className="divider-line" />
     <div className="more-info">
       <p className="footer-section-title">More Info</p>
