@@ -7,10 +7,10 @@ require("dotenv").config({
 const isAppsSite = process.env.GATSBY_INDEX_PAGE_MODE == "apps";
 
 const notaMetadata = {
-  title: "Nota",
+  title: "Nota - Event Apps",
   siteUrl: "https://madebynota.com",
   image: "/nota-embed-image.png",
-  description: 'NOTA is powering the next generation of event apps for organizers and attendees',
+  description: 'Nota is powering the next generation of event apps for organizers and attendees',
   ogImageWidth: 600,
   ogImageHeight: 600,
   twitterDomain: 'madebynota.com',
