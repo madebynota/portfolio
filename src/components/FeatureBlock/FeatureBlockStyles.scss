@@ -25,13 +25,21 @@
     }
   }
 
+  @include breakpoint("mobile") {
+    &:nth-last-child(n + 2) {
+      margin-bottom: $spacing-large;
+    }
+  }
+
   &__img {
     width: 3.125rem;
     height: 3.125rem;
     max-width: 3.125rem;
     max-height: 3.125rem;
 
-    svg, g, path {
+    svg,
+    g,
+    path {
       stroke: $bic_off_white;
     }
   }

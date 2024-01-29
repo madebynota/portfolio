@@ -10,6 +10,10 @@
 
   // Creating rows in the explicit grid for the benefit of using the full possibilities of grid-row.
   grid-template-rows: repeat(2, minmax(0, auto));
+
+  @include breakpoint("mobile") {
+    padding-bottom: $spacing-x-large;
+  }
 }
 
 .nota-hero-logo {
@@ -33,7 +37,8 @@
   }
 }
 
-.headline, .subheadline {
+.headline,
+.subheadline {
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -72,6 +77,12 @@
 
   @include breakpoint("mobile") {
     display: none;
+  }
+}
+
+.hero-cta-button {
+  @include breakpoint("mobile") {
+    margin-bottom: 0;
   }
 }
 

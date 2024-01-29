@@ -3,6 +3,10 @@
 
 .apps-container {
   padding: $spacing-xxx-large 0;
+
+  @include breakpoint("mobile") {
+    padding: $spacing-x-large 0;
+  }
 }
 
 .demo-section {
@@ -47,7 +51,7 @@
     width: 0.75rem;
     height: 0.75rem;
     transition: 0.3s;
-  
+
     svg {
       display: none;
     }
@@ -59,6 +63,10 @@
 
   &.apps-page-section {
     padding: $spacing-xxx-large 0;
+
+    @include breakpoint("mobile") {
+      padding: $spacing-x-large 0;
+    }
   }
 
   &__header.text {

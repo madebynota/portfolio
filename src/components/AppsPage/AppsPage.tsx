@@ -29,12 +29,10 @@ export const AppsPage: React.FC<PageProps> = () => {
         ))}
       </div>
       <AppsPageSection className="feature-section">
-        <Text
-          className="feature-section__header"
-          type="h2"
-          mobileType="h5"
-        >Enhance your event experience</Text>
-        {featuresData.map(feature => (
+        <Text className="feature-section__header" type="h2" mobileType="h5">
+          Enhance your event experience
+        </Text>
+        {featuresData.map((feature) => (
           <FeatureBlock
             iconSrc={feature.iconSrc}
             title={feature.title}
