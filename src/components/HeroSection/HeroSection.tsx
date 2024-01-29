@@ -17,10 +17,14 @@ export const HeroSection = () => (
         <img src={mobileImg} />
       </div>
       <Text className="subheadline" type="h3" mobileType="p">
-        Nota is powering the next generation of event apps for organizers
-        and attendees
+        Nota is powering the next generation of event apps for organizers and
+        attendees
       </Text>
-      <Button buttonLabel="request demo" onClick={openDemoForm} />
+      <Button
+        buttonLabel="request demo"
+        className="hero-cta-button"
+        onClick={openDemoForm}
+      />
     </div>
     <div className="image-section">
       <img src={heroImg} />
