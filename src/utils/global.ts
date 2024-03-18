@@ -1,3 +1,3 @@
 export const openDemoForm = () => {
-  window.open('https://forms.monday.com/forms/e4aecd01ca582fa2f7d386930fff44ad?r=use1', '_blank')?.focus();
+  window.open('https://tally.so/r/3jyaba', '_blank')?.focus();
 };
